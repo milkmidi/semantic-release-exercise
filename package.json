@@ -1,0 +1,42 @@
+{
+  "name": "semantic-release-exercise",
+  "version": "1.0.0",
+  "description": "semantic-release-exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "release": {
+    "branches": [
+      "master",
+      {
+        "name": "next",
+        "prerelease": "rc"
+      }
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      "@semantic-release/git"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milkmidi/semantic-release-exercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milkmidi/semantic-release-exercise/issues"
+  },
+  "homepage": "https://github.com/milkmidi/semantic-release-exercise#readme",
+  "dependencies": {
+    "semantic-release": "^17.4.3"
+  }
+}
